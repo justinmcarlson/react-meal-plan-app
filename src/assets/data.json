@@ -1,0 +1,183 @@
+[
+  {
+    "id": 10,
+    "name": "Melissa's Staples",
+    "ingredients": [
+      "🥛 Almond Milk",
+      "🍦 Non-dairy Icecream",
+      "🌰 Hummus 4-pack",
+      ""
+    ],
+    "checked": true,
+    "imageURL": "test"
+  },
+  {
+    "id": 1,
+    "name": "Justin's Staples",
+    "ingredients": [
+      "Aldi Chicken Thighs Family Pack",
+      "Aldi Bone-in Pork Chops",
+      "Aldi Salad Bag",
+      "🥦 Frozen Broccoli",
+      "🌱Frozen Green Beans",
+      "Frozen Brussel Sprouts",
+      "🍦 SO Delicious Salted Caramel Cashew Ice Cream"
+    ],
+    "checked": false,
+    "imageURL": "test"
+  },
+  {
+    "id": 2,
+    "name": "Shared Staples",
+    "ingredients": ["🧅 Onions", "🥕 Carrots", "🥬 Celery", ""],
+    "checked": false,
+    "imageURL": "test"
+  },
+  {
+    "id": 3,
+    "name": "Chicken Fajitas",
+    "rating": 10,
+    "ingredients": [
+      "🐔 1 pound boneless, skinless chicken breasts, trimmed",
+      "🧂 Salt and pepper",
+      "🍾 2 tablespoons vegetable oil",
+      "🍋 2 tablespoons fresh lime juice",
+      "🌶 2 red or green bell peppers, stemmed, seeded, and sliced thin",
+      "🧅 1 red onion, halved and sliced thin",
+      "🟥 1 teaspoon chili powder",
+      "🟨 ½ teaspoon cumin",
+      "💧 2 to 4 tablespoons water",
+      "🔥 1 teaspoon Tabasco",
+      "🌯 10 (6-inch) flour/corn tortillas"
+    ],
+    "checked": false,
+    "imageURL": "test"
+  },
+  {
+    "id": 4,
+    "name": "All American Beef Chili (ATK)",
+    "rating": 9,
+    "ingredients": [
+      "🍾 2 tablespoons vegetable oil",
+      "🧅 2 onions, chopped",
+      "🌶 1 red bell pepper, stemmed, seeded, and chopped",
+      "🟥 ¼ cup chili powder",
+      "🟨 1 tablespoon cumin",
+      "🔥 1/2 teaspoon cayenne pepper ",
+      "🧂 salt",
+      "🧄 6 garlic cloves, minced",
+      "🥩 2 pounds (85 percent lean) ground beef",
+      "🌰 2 (15.5-ounce) cans dark red kidney beans, rinsed",
+      "🍅 1 (28-ounce) can diced tomatoes",
+      "🍅 1 (28-ounce) can tomato puree"
+    ],
+    "checked": false,
+    "imageURL": "test"
+  },
+  {
+    "id": 5,
+    "name": "Fish Tacos (Natashas Kitchen)",
+    "rating": 10,
+    "ingredients": [
+      "🌯 24 small white corn tortillas",
+      "🐟 1 1/2 lb tilapia",
+      "🟨 1/2 tsp ground cumin",
+      "🟥 1/2 tsp cayenne pepper",
+      "🧂 1 tsp salt",
+      "🧂 1/4 tsp black pepper",
+      "🍾 1 Tbsp Olive oil",
+      "🧈 1 Tbsp unsalted butter",
+      "🥬 1/2 small purple cabbage",
+      "🥑 2 medium avocado, sliced",
+      "🍅 2 roma tomatoes, diced (optional)",
+      "🧅 1/2 diced red onion",
+      "🌿 1/2 bunch Cilantro, longer stems removed",
+      "🧀 4 oz 1 cup Cotija cheese, grated",
+      "🍋 1 lime cut into 8 wedges to serve",
+      "🐄 1/2 cup sour cream",
+      "🍾 1/3 cup Mayo",
+      "🍋 2 Tbsp lime juice, from 1 medium lime",
+      "🧄 1 tsp garlic powder",
+      "🔥 1 tsp Sriracha sauce, or to taste"
+    ],
+    "checked": false,
+    "imageURL": "test"
+  },
+  {
+    "id": 6,
+    "name": "Everyday Pad Thai (ATK YouTube)",
+    "rating": 9,
+    "ingredients": [
+      "🍾 1.3 cup white vinegar",
+      "🌶 1 Serrano chili",
+      "💧 1/4 cup water",
+      "🧂 1/2 tsp. sugar",
+      "🧂 1/4 tsp. salt",
+      "🌱3 radishes cut into matchsticks",
+      "🍜 8 ounces (¼-inch-wide) dried flat rice noodles",
+      "💧 ½ cup water",
+      "🍾 1.4 Cup Fish Sauce",
+      "😋 3 TBSP Sugar",
+      "🍋 3 TBSP Tamarind Concentrate",
+      "🧄 3 garlic cloves, minced",
+      "🌱4 Scallions",
+      "🍾 1/4 cup vegetable oil",
+      "🍤 1 lb medium shrimp (41 to 50 per pound), peeled, deveined, and tails removed",
+      "🥚 2 large eggs, lightly beaten",
+      "🧂 1/4 teaspoon salt",
+      "🥜 6 tablespoons chopped unsalted roasted peanuts",
+      "🌱 6 ounces (3 cups) bean sprouts (or snow peas bamboo shoots or cabbage)",
+      "🍋 Lime wedges",
+      "🌿 Fresh cilantro leaves",
+      "🔥 Sriracha"
+    ],
+    "checked": false,
+    "imageURL": "test"
+  },
+  {
+    "id": 7,
+    "name": "Indian Red Lentil Dahl (biancazapatka!)",
+    "rating": 7,
+    "ingredients": [
+      "🥥 1-2 tbsp coconut oil or other neutral oil for frying",
+      "🧅 2 onions chopped",
+      "🧄 4 garlic cloves minced",
+      "🌱 2 tsp ginger minced (or more to taste)",
+      "🟨 1 tsp turmeric",
+      "🟨 1 tsp coriander",
+      "🟨 1 tsp cumin",
+      "🟥 1 tsp red paprika powder",
+      "🟫 1 tsp garam masala or other curry powder to taste",
+      "🌰 1 ⅔ cups (300 g) dry red lentils",
+      "🍲 3 ¼ cups (780 ml) vegetable broth",
+      "🥥 1 cup (240 ml) coconut milk",
+      "🍅 1 cup (240 ml) strained tomatoes or chopped tomatoes, optional",
+      "🧂 salt and pepper to taste",
+      "🥥 2 tsp coconut sugar or to taste",
+      "🍋 2-3 tbsp lime or lemon juice or to taste",
+      "🥥 4-6 tbsp non-dairy yogurt",
+      "🌿 fresh parsley or coriander",
+      "⬜ sesame seeds",
+      "🍚 rice cooked"
+    ],
+    "checked": false,
+    "imageURL": "test"
+  },
+  {
+    "id": 8,
+    "name": "Easy Chicken Enchiladas (ATK)",
+    "rating": 7,
+    "ingredients": [
+      "🐔 3 cups shredded cooked chicken (1½ pounds)",
+      "🧀 12 ounces sharp cheddar cheese, shredded (3 cups)",
+      "🟥 2 1/2 cups enchilada sauce (see note above)",
+      "🥫 1 to 2 (4-ounce) cans chopped green chiles, drained",
+      "🌿 ½ cup minced fresh cilantro",
+      "🧂 Salt and pepper",
+      "🌯 12 (6-inch) soft corn tortillas",
+      "🍋 Lime wedges (for serving)"
+    ],
+    "checked": false,
+    "imageURL": "test"
+  }
+]
