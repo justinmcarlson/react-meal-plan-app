@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import NewRecipe from '../Presentational/NewRecipe';
 import EditRecipe from '../Presentational/EditRecipe';
+import RecipeList from '../Presentational/RecipeList';
 import IngredientsList from '../Presentational/IngredientsList';
 import '../App.css';
 
@@ -129,53 +130,25 @@ export default function App() {
 
   return (
     <main>
-      <form onSubmit={handleNewRecipeSubmit}>
-        <h2>Add New Recipe</h2>
-        <label htmlFor="name">Name:</label>
-        <input
-          name="name"
-          placeholder="New Recipe"
-          value={newRecipe.name || ''}
-          onChange={handleNewRecipeChange}
-          required
-        />
-        <br />
-        <label htmlFor="ingredients">Ingredients (separate by commas):</label>
-        <br />
-        <textarea
-          name="ingredients"
-          placeholder="Ingredients..."
-          value={newRecipe.ingredients || ''}
-          onChange={handleNewRecipeChange}
-          required
-        />
-        <br />
-        <button type="submit">Add Recipe</button>
-      </form>
+      <NewRecipe
+        handleNewRecipeSubmit={handleNewRecipeSubmit}
+        handleNewRecipeChange={handleNewRecipeChange}
+        newRecipe={newRecipe}
+      />
 
-      <h2>Recipes</h2>
-      <button onClick={handleSortByName}>Sort Recipes</button>
-      <ul className="recipe-list">
-        {allRecipes.map((recipe) => (
-          <li key={recipe.id}>
-            <input
-              type="checkbox"
-              checked={recipe.checked}
-              onChange={(e) => handleCheckedChange(recipe.id, e.target.checked)} // Pass recipeId
-            />
-            {recipe.name}
-            <button onClick={() => handleEditRecipe(recipe)}>Edit</button>
-            <button onClick={() => handleDelete(recipe.id)}>X</button>
-          </li>
-        ))}
-      </ul>
+      <RecipeList
+        allRecipes={allRecipes}
+        handleSortByName={handleSortByName}
+        handleEditRecipe={handleEditRecipe}
+        handleDelete={handleDelete}
+        handleCheckedChange={handleCheckedChange}
+      />
 
       <EditRecipe 
       handleEditRecipeChange={handleEditRecipeChange}
       handleEditRecipeSubmit={handleEditRecipeSubmit}
       editRecipe={editRecipe}
       />
-      {/* <NewRecipe /> */}
 
       <IngredientsList allRecipes={allRecipes} />
     </main>
