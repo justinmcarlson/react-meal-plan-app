@@ -44,19 +44,17 @@ export default function App() {
   });
   const handleNewRecipeChange = ({ target }) => {
     const { name, value } = target;
-    const handledValue = name === 'ingredients' ? value.split(/\r?\n/) : value; // Split on any combination of \r (carriage return) and \n (newline)
-    console.log(handledValue);
     setNewRecipe((prevRecipe) => ({
       ...prevRecipe,
       id: Date.now(),
-      [name]: handledValue,
+      [name]: value,
     }));
     // console.log(newRecipe);
   };
 
   const handleNewRecipeSubmit = (event) => {
     event.preventDefault(); // Validate required fields (optional, but recommended)
-
+    newRecipe.ingredients = newRecipe.ingredients.split(/\r?\n/);
     const requiredFields = ['name', 'ingredients'];
     const isEmpty = requiredFields.some((field) => !newRecipe[field]);
     if (isEmpty) {
