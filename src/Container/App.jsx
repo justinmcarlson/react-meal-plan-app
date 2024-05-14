@@ -65,6 +65,21 @@ export default function App() {
     } // Add the new recipe to the allRecipes state
     setAllRecipes((prevRecipes) => [newRecipe, ...prevRecipes]);
     setNewRecipe({});
+    closeModal("newRecipeDialog");
+  };
+
+  function closeModal(modalId) {
+    // console.log('closing modal');
+    const dialog = document.getElementById(modalId);
+    if(dialog) {
+      dialog.close();
+    }
+  };
+  function openModal(modalId) {
+    const dialog = document.getElementById(modalId);
+    if (dialog) {
+      dialog.showModal();
+    }
   };
 
   const handleCheckedChange = (recipeId, isChecked) => {
@@ -98,6 +113,7 @@ export default function App() {
       checked,
       imageURL,
     }));
+    openModal("editRecipeDialog");
   };
 
   const handleEditRecipeSubmit = (event) => {
@@ -120,6 +136,7 @@ export default function App() {
     // handleSortByName();
 
     setEditRecipe({}); // Clear the editRecipe state
+    closeModal("editRecipeDialog");
   };
 
   const handleDelete = (recipeIdToRemove) => {
@@ -134,6 +151,8 @@ export default function App() {
         handleNewRecipeSubmit={handleNewRecipeSubmit}
         handleNewRecipeChange={handleNewRecipeChange}
         newRecipe={newRecipe}
+        openModal={openModal}
+        closeModal={closeModal}
       />
 
       <RecipeList
@@ -144,13 +163,18 @@ export default function App() {
         handleCheckedChange={handleCheckedChange}
       />
 
-      <EditRecipe 
-      handleEditRecipeChange={handleEditRecipeChange}
-      handleEditRecipeSubmit={handleEditRecipeSubmit}
-      editRecipe={editRecipe}
+      <EditRecipe
+        handleEditRecipeChange={handleEditRecipeChange}
+        handleEditRecipeSubmit={handleEditRecipeSubmit}
+        editRecipe={editRecipe}
+        closeModal={closeModal}
       />
 
-      <IngredientsList allRecipes={allRecipes} />
+      <IngredientsList
+        allRecipes={allRecipes}
+        openModal={openModal}
+        closeModal={closeModal}
+      />
     </main>
   );
 }

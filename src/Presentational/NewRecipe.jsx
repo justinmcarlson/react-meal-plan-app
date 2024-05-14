@@ -4,15 +4,9 @@ export default function NewRecipe({
   handleNewRecipeSubmit,
   handleNewRecipeChange,
   newRecipe,
+  openModal,
+  closeModal
 }) {
-  function closeModal() {
-    const dialog = document.getElementById("newRecipeDialog");
-    dialog.close();
-  }
-  function openModal() {
-    const dialog = document.getElementById("newRecipeDialog");
-    dialog.showModal();
-  }
   return (
     <>
       <dialog id="newRecipeDialog">
@@ -37,11 +31,11 @@ export default function NewRecipe({
             required
           />
           <br />
-          <button type="submit" >Add Recipe</button>
-          <button id="closeNewRecipeDialog" onClick={closeModal} autofocus>Close</button>
+          <button type="submit">Add Recipe</button>
         </form>
+        <button id="closeNewRecipeDialog" onClick={() => closeModal("newRecipeDialog")} autoFocus>Close</button>
       </dialog>
-      <button id="OpenNewRecipeDialog" onClick={openModal}>Add Recipe</button>
+      <button id="OpenNewRecipeDialog" onClick={() => openModal("newRecipeDialog")}>Add Recipe</button>
     </>
   );
 }
