@@ -16,8 +16,8 @@ export default function IngredientsList({ allRecipes, openModal, closeModal }) {
           </>
         ))}
       </ul>
-      <button onClick={() => closeModal('ingredientsListDialog')}>Close</button>
       <button onClick={() => navigator.clipboard.writeText(ingredientsList) }>Copy to Clipboard</button>
+      <button onClick={() => closeModal('ingredientsListDialog')}>Close</button>
       </dialog>
       <button onClick={() => openModal('ingredientsListDialog')}>Show Ingredient List</button>
     </>
