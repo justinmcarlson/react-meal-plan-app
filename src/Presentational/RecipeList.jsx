@@ -22,7 +22,10 @@ export default function RecipeList({
             />
             <span className={styles.recipeName}>{recipe.name}</span>
             <span className={styles.recipeActions}>
+              {recipe.rating &&
               <span className={styles.recipeRating}>{recipe.rating}⭐</span>
+              }
+              
               <button onClick={() => handleEditRecipe(recipe)}>Edit</button>
               <button onClick={() => handleDelete(recipe.id)}>X</button>
             </span>
