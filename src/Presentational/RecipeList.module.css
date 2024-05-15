@@ -1,0 +1,24 @@
+.recipeRating {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+ul.recipeList {
+    padding-left: 0;
+}
+
+.recipeList>li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    list-style: none;
+    justify-content: flex-start;
+    flex-direction: row;
+    column-gap: 15px;
+}
+.recipeName {
+    flex-grow: 1;
+}
