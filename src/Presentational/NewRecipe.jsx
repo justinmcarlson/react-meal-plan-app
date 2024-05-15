@@ -21,6 +21,16 @@ export default function NewRecipe({
             required
           />
           <br />
+          <label htmlFor="rating">Rating:</label>
+          <input
+            name="rating"
+            type="number"
+            min="1"
+            max="5"
+            value={newRecipe.rating || ""}
+            onChange={handleNewRecipeChange}
+          />
+          <br />
           <label htmlFor="ingredients">Ingredients (separate by commas):</label>
           <br />
           <textarea

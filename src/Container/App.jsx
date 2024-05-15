@@ -38,6 +38,7 @@ export default function App() {
 
   const [newRecipe, setNewRecipe] = useState({
     name: '',
+    rating: '',
     ingredients: [],
     checked: false,
     imageURL: '',
@@ -100,13 +101,14 @@ export default function App() {
     }));
   };
 
-  const handleEditRecipe = ({ id, name, ingredients, checked, imageURL }) => {
-    console.log(id, name, ingredients, checked, imageURL);
+  const handleEditRecipe = ({ id, name, rating, ingredients, checked, imageURL }) => {
+    console.log(id, name, rating, ingredients, checked, imageURL);
     const lineBreakIngredients = ingredients.join('\n');
     setEditRecipe((prevRecipe) => ({
       ...prevRecipe,
       id,
       name,
+      rating,
       ingredients: lineBreakIngredients,
       checked,
       imageURL,

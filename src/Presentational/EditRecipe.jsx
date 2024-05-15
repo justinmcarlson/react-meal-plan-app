@@ -20,7 +20,17 @@ export default function EditRecipe({
           required
           />
         <br />
-        <label htmlFor="ingredients">Ingredients (separate by commas):</label>
+        <label htmlFor="rating">Rating:</label>
+        <input
+          name="rating"
+          type="number"
+          min="1"
+          max="5"
+          value={editRecipe.rating || ''}
+          onChange={handleEditRecipeChange}
+          />
+        <br />
+        <label htmlFor="ingredients">Ingredients (one per line):</label>
         <br />
         <textarea
           name="ingredients"
