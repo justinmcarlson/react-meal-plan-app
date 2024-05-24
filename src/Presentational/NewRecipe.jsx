@@ -31,7 +31,14 @@ export default function NewRecipe({
             onChange={handleNewRecipeChange}
           />
           <br />
-          <label htmlFor="ingredients">Ingredients (separate by commas):</label>
+          <label htmlFor="tags">Tags:</label>
+          <input
+            name="tags"
+            value={newRecipe.tags || ""}
+            onChange={handleNewRecipeChange}
+          />
+          <br />
+          <label htmlFor="ingredients">Ingredients (separate by returns):</label>
           <br />
           <textarea
             name="ingredients"

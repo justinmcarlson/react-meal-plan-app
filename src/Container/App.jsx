@@ -38,6 +38,7 @@ export default function App() {
 
   const [newRecipe, setNewRecipe] = useState({
     name: '',
+    tags: [],
     rating: '',
     ingredients: [],
     checked: false,
@@ -56,6 +57,7 @@ export default function App() {
   const handleNewRecipeSubmit = (event) => {
     event.preventDefault(); // Validate required fields (optional, but recommended)
     newRecipe.ingredients = newRecipe.ingredients.split(/\r?\n/);
+    newRecipe.tags = newRecipe.tags.split(',');
     const requiredFields = ['name', 'ingredients'];
     const isEmpty = requiredFields.some((field) => !newRecipe[field]);
     if (isEmpty) {
@@ -101,14 +103,16 @@ export default function App() {
     }));
   };
 
-  const handleEditRecipe = ({ id, name, rating, ingredients, checked, imageURL }) => {
-    console.log(id, name, rating, ingredients, checked, imageURL);
+  const handleEditRecipe = ({ id, name, rating, tags, ingredients, checked, imageURL }) => {
+    console.log(id, name, rating, tags, ingredients, checked, imageURL);
     const lineBreakIngredients = ingredients.join('\n');
+    // const joinedIngredients = tags.join(',');
     setEditRecipe((prevRecipe) => ({
       ...prevRecipe,
       id,
       name,
       rating,
+      tags,
       ingredients: lineBreakIngredients,
       checked,
       imageURL,
@@ -120,11 +124,13 @@ export default function App() {
     event.preventDefault();
     console.log(editRecipe);
     const ingredientsArray = editRecipe.ingredients.split(/\r?\n/);
+    const tagsArray = editRecipe.tags.split(',');
     console.log(ingredientsArray);
     // Find the recipe to update in allRecipes
     const updatedRecipes = allRecipes.map((recipe) => {
       if (recipe.id === editRecipe.id) {
         editRecipe.ingredients = ingredientsArray;
+        editRecipe.tags = tagsArray;
         return editRecipe;
       } else {
         return recipe;

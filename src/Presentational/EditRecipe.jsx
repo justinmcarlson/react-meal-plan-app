@@ -29,6 +29,13 @@ export default function EditRecipe({
           value={editRecipe.rating || ''}
           onChange={handleEditRecipeChange}
           />
+          <br />
+          <label htmlFor="tags">Tags:</label>
+          <input
+            name="tags"
+            value={editRecipe.tags || ""}
+            onChange={handleEditRecipeChange}
+          />
         <br />
         <label htmlFor="ingredients">Ingredients (one per line):</label>
         <br />
