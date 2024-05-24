@@ -10,8 +10,8 @@ export default function IngredientsList({ allRecipes, openModal, closeModal }) {
       <ul>
         {checkedRecipes.map((recipe) => (
           <>
-            {recipe.ingredients.map((ingredient) => (
-              <li>{ingredient}</li>
+            {recipe.ingredients.map((ingredient, index) => (
+              <li key={`${recipe.id}-${index}`}>{ingredient}</li>
             ))}
           </>
         ))}

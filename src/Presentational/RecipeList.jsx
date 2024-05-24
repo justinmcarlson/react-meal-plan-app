@@ -25,8 +25,8 @@ export default function RecipeList({
               {recipe.rating &&
               <span className={styles.recipeRating}>{recipe.rating}⭐</span>
               }
-              {recipe.tags.map((tag) => (
-                <span key={tag} className={styles.recipeTags}>{tag} </span>
+              {recipe.tags.map((tag, index) => (
+                <span key={`${index}-${tag}`} className={styles.recipeTag}>{tag} </span>
               ))}
               <button onClick={() => handleEditRecipe(recipe)}>Edit</button>
               <button onClick={() => handleDelete(recipe.id)}>X</button>
