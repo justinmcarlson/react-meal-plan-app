@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./RecipeList.module.css";
 
 export default function RecipeList({
   allRecipes,
@@ -10,26 +9,30 @@ export default function RecipeList({
 }) {
   return (
     <>
-      <h2>Recipes</h2>
-      <button onClick={handleSortByName}>Sort Recipes</button>
-      <ul className={styles.recipeList}>
+      <div className="flex justify-between">
+
+      <h2 className="text-2xl font-bold">Recipes</h2>
+      <button className="bg-gray-200 hover:bg-gray-300 py-2 px-4 rounded-full" onClick={handleSortByName}>Sort Recipes</button>
+      </div>
+      <ul className="list-disc ml-6">
         {allRecipes.map((recipe) => (
-          <li key={recipe.id}>
+          <li key={recipe.id} className="flex items-center mb-2">
             <input
               type="checkbox"
               checked={recipe.checked}
-              onChange={(e) => handleCheckedChange(recipe.id, e.target.checked)} // Pass recipeId
+              onChange={(e) => handleCheckedChange(recipe.id, e.target.checked)}
+              className="mr-2 w-5 h-5"
             />
-            <span className={styles.recipeName}>{recipe.name}</span>
-            <span className={styles.recipeActions}>
+            <span className="text-lg flex-grow">{recipe.name}</span>
+            <span className="ml-2">
               {recipe.rating &&
-              <span className={styles.recipeRating}>{recipe.rating}⭐</span>
+              <span className="bg-lime-600 text-white px-2 py-1 rounded mr-1">{recipe.rating}⭐</span>
               }
               {recipe.tags.map((tag, index) => (
-                <span key={`${index}-${tag}`} className={styles.recipeTag}>{tag} </span>
+                <span key={`${index}-${tag}`} className="bg-red-400 px-2 py-1 rounded mr-1">{tag} </span>
               ))}
-              <button onClick={() => handleEditRecipe(recipe)}>Edit</button>
-              <button onClick={() => handleDelete(recipe.id)}>X</button>
+              <button className="bg-gray-600 hover:bg-gray-700 text-white py-2 px-4 rounded mr-1" onClick={() => handleEditRecipe(recipe)}>Edit</button>
+              <button className="bg-gray-100 hover:bg-gray-300 px-4 py-2 rounded" onClick={() => handleDelete(recipe.id)}>X</button>
             </span>
           </li>
         ))}
@@ -37,3 +40,5 @@ export default function RecipeList({
     </>
   );
 }
+
+

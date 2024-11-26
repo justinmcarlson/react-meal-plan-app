@@ -152,7 +152,7 @@ export default function App() {
   };
 
   return (
-    <main>
+    <main className="max-w-4xl mx-auto space-y-2 p-8 bg-gray-100">
       <NewRecipe
         handleNewRecipeSubmit={handleNewRecipeSubmit}
         handleNewRecipeChange={handleNewRecipeChange}

@@ -5,21 +5,25 @@ export default function IngredientsList({ allRecipes, openModal, closeModal }) {
   const ingredientsList = checkedRecipes.map((recipe) => recipe.ingredients.join('\n'));
   return (
     <>
-      <dialog id="ingredientsListDialog">
-      <h2>Ingredients List</h2>
-      <ul>
+      <dialog id="ingredientsListDialog" className="bg-white rounded-lg shadow-lg p-8">
+      <h2 className="font-bold text-2xl">Ingredients List</h2>
+      <ul className="list-disc ml-6">
         {checkedRecipes.map((recipe) => (
           <>
             {recipe.ingredients.map((ingredient, index) => (
-              <li key={`${recipe.id}-${index}`}>{ingredient}</li>
+              <li key={`${recipe.id}-${index}`} className="text-lg">{ingredient}</li>
             ))}
           </>
         ))}
       </ul>
-      <button onClick={() => navigator.clipboard.writeText(ingredientsList) }>Copy to Clipboard</button>
-      <button onClick={() => closeModal('ingredientsListDialog')}>Close</button>
+      <div className="flex justify-end">
+        <button className="bg-lime-600 hover:bg-lime-700 text-white py-2 px-4 rounded-full" onClick={() => navigator.clipboard.writeText(ingredientsList) }>Copy to Clipboard</button>
+        <button className="bg-gray-100 hover:bg-gray-300 py-2 px-4 rounded-full" onClick={() => closeModal('ingredientsListDialog')}>Close</button>
+      </div>
       </dialog>
-      <button onClick={() => openModal('ingredientsListDialog')}>Show Ingredient List</button>
+      <button className="bg-lime-600 hover:bg-lime-700 text-white py-2 px-4 rounded-full" onClick={() => openModal('ingredientsListDialog')}>Show Ingredient List</button>
     </>
   );
 }
+
+
