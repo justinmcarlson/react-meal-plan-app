@@ -59,6 +59,7 @@ export default function EditRecipe({
           onChange={handleEditRecipeChange}
           required
           className='border border-gray-500 p-2 w-full'
+          rows={editRecipe.ingredients ? editRecipe.ingredients.split('\n').length + 1 : 3}
           />
         <br />
         <button type="submit" className='px-4 py-2 rounded-full bg-lime-600 hover:bg-lime-700 active:bg-lime-800 focus:ring focus:ring-lime-300 text-white'>Save Recipe</button>
